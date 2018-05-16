@@ -1,0 +1,122 @@
+\include{preamble} % <- Byta namn till "preamble.tex"?
+
+% ---------- New packages, commands and settings ------------
+\usepackage{lipsum}
+% ---------- Title and Author ------------
+  \title{Scientific Report Template}
+  \author{
+    Göte Johansson (\mail{gote1234@student.umu.se}) \\
+    Enar Johansson (\mail{enrj4321@student.umu.se})
+    }
+  \date{\today}
+
+% ---------- Page styles ------------
+% Changes header and footer for the front page.
+\fancypagestyle{FirstPageStyle}{
+    \headheight 35pt
+    \rhead{\small\today}
+    \lhead{\small Department of Physics \\ Umeå University}
+    \cfoot{Course \\ Supervisor: }
+}
+
+% Changes header, footer and indentation (no indent, paragraph skip).
+\fancypagestyle{DocumentStyle}{
+  \headheight 30pt
+  \rhead{\small \myTitle}
+  \lhead{\small \myAuthor \today}
+  \cfoot{\thepage}
+  \setlength{\parskip}{5pt plus 1pt minus 1pt}
+  \setlength{\parindent}{0pt}
+}
+
+
+% -------------- Document ---------------
+\begin{document}
+
+% ------------- TITLE PAGE --------------
+\begin{titlepage}
+
+  \maketitle
+  \thispagestyle{FirstPageStyle}
+
+  \begin{abstract}
+   \noindent
+   This is a suggestion for an updated template for the Engineering Physics programme at Umeå University made by Filip Edström and Joar Svartholm.
+  \end{abstract}
+
+\end{titlepage}
+% -------------- END TITLE PAGE ------------
+
+
+% ------------- Table of contents -----------
+\pagestyle{DocumentStyle}
+\tableofcontents
+\newpage
+
+% ---------------- Content -----------------
+
+
+
+
+
+\section{Headers and footers}
+In the current template the header of the document includes the authors. For more than two authors the header gets crowded, as in fig. \ref{Fig:UglyHeader}. The current templates header is used for this document as well.
+
+Suggestion: Different header, not including the author with emails or not including authors at all. Maximum two rows.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{Figures/Ugly_header.png}
+    \caption{This is when the header becomes a problem.}
+    \label{Fig:UglyHeader}
+\end{figure}
+
+\section{Figures}
+Different figure types. Some may be preferred to others and in a template all may/should be presented and recommended for different occasions.
+\input{FiguresText}
+
+\section{Hyperlinks}
+Should they be in a specific color?
+
+\section{References}
+What sort of reference system is preferred? \cite{einstein}
+
+It would be good to have nice examples in the template. \cite{latexcompanion}
+
+
+
+\begin{thebibliography}{9}
+\bibitem{latexcompanion}
+Michel Goossens, Frank Mittelbach, and Alexander Samarin.
+\textit{The \LaTeX\ Companion}.
+Addison-Wesley, Reading, Massachusetts, 1993.
+
+\bibitem{einstein}
+Albert Einstein.
+\textit{Zur Elektrodynamik bewegter K{\"o}rper}. (German)
+[\textit{On the electrodynamics of moving bodies}].
+Annalen der Physik, 322(10):891–921, 1905.
+
+\bibitem{knuthwebsite}
+Knuth: Computers and Typesetting,
+\\\texttt{http://www-cs-faculty.stanford.edu/\~{}uno/abcde.html}
+\end{thebibliography}
+
+
+\newpage
+\begin{appendices}
+    How is the appendix supposed to look like in the table of contents? Is the page enumeration supposed to restart?
+    \section{Appended figure}
+    \begin{figure}[H]
+    	\centering
+    	\includegraphics[width=0.8\linewidth]{Figures/PacevsSpeed.png}
+    	\caption{This is a figure of format PNG of dimensions 1468 x 1162 pixels. The caption is in italic with a bold title. The figure width is 0.8 of the linewidth (textwidth). Height is scaled to keep original proportions.}
+    	\label{Fig:}
+    \end{figure}
+    \section{Appended code}
+    When appending code, are there any preferences? Should we include a format like in this template with colors etc.?
+    \lstinputlisting{Problem1919.py}
+\end{appendices}
+
+\end{document}
+% ------------- End Document -----------

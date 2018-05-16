@@ -1,0 +1,72 @@
+
+\subsection{Appendix style figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{Figures/PacevsSpeed.png}
+	\caption{This is a figure of format PNG of dimensions 1468 x 1162 pixels. The caption is in italic with a bold title. The figure width is 0.8 of the linewidth (textwidth). Height is scaled to keep original proportions.}
+	\label{Fig:}
+\end{figure}
+
+\lipsum[1]
+
+\subsection{Blocks of (sub)figures}
+
+\begin{figure}[H]
+  \begin{minipage}[b]{.5\linewidth}
+    \centering
+	\includegraphics[width=0.8\linewidth]{Figures/PacevsSpeed.png}
+    \caption{This is a subfigure.}
+	\label{fig:1a}
+  \end{minipage}%
+  \begin{minipage}[b]{.5\linewidth}
+    \centering
+	\includegraphics[width=0.8\linewidth]{Figures/PacevsSpeed.png}
+    \caption{And this is another subfigure.}
+	\label{fig:1b}
+  \end{minipage}
+  \label{fig:1}
+\end{figure}
+
+
+
+\lipsum[1]
+
+\begin{figure}[H]
+  \begin{minipage}[b]{.5\linewidth}
+    \centering
+	\includegraphics[width=0.8\linewidth]{Figures/PacevsSpeed.png}
+    \subcaption{This is a subfigure.}
+	\label{fig:1a}
+  \end{minipage}%
+  \begin{minipage}[b]{.5\linewidth}
+    \centering
+	\includegraphics[width=0.8\linewidth]{Figures/PacevsSpeed.png}
+    \subcaption{And this is another subfigure.}
+	\label{fig:1b}
+  \end{minipage}
+  \label{fig:1}
+  \begin{minipage}[b]{.5\linewidth}
+    \centering
+	\includegraphics[width=0.8\linewidth]{Figures/PacevsSpeed.png}
+    \subcaption{And this is another subfigure.}
+	\label{fig:1a}
+  \end{minipage}%
+  \begin{minipage}[b]{.5\linewidth}
+    \centering
+	\includegraphics[width=0.8\linewidth]{Figures/PacevsSpeed.png}
+    \subcaption{And this is another subfigure.}
+	\label{fig:1b}
+  \end{minipage}
+  \caption{This is the figure with subfigures.}
+  \label{fig:1}
+\end{figure}
+
+\subsection{Wrapped figure}
+
+\begin{wrapfigure}{r}[0pt]{0.5\linewidth}
+	\includegraphics[width=\linewidth]{Figures/PacevsSpeed.png}
+	\caption{This figure is wrapped in the text.}
+	\label{Fig:}
+\end{wrapfigure}
+
+\lipsum[1-2]
